@@ -1,0 +1,35 @@
+name: Bouw VrijRit voor iPhone
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bouw zonder Apple-account
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -project VrijRit.xcodeproj -target VrijRit \
+            -configuration Release -sdk iphoneos \
+            CONFIGURATION_BUILD_DIR="$RUNNER_TEMP/vrijrit-build" \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build
+      - name: Maak IPA voor AltStore
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/vrijrit-package/Payload"
+          test -d "$RUNNER_TEMP/vrijrit-build/VrijRit.app"
+          ditto "$RUNNER_TEMP/vrijrit-build/VrijRit.app" "$RUNNER_TEMP/vrijrit-package/Payload/VrijRit.app"
+          cd "$RUNNER_TEMP/vrijrit-package"
+          zip -qr "$GITHUB_WORKSPACE/VrijRit-unsigned.ipa" Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VrijRit-iPhone
+          path: VrijRit-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 3
