@@ -1,0 +1,24 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+92D27FA9819136555E8E8A0B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Analytics.swift"; sourceTree = "<group>"; };
+3736287ABAD8C9B32F671D16 = { isa = PBXBuildFile; fileRef = 92D27FA9819136555E8E8A0B; };
+32BC6608901033E152158259 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SummaryViews.swift"; sourceTree = "<group>"; };
+B1E01DF435B98932FCD12530 = { isa = PBXBuildFile; fileRef = 32BC6608901033E152158259; };
+069CC272CEA9126EE9AFF405 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VrijRit.swift"; sourceTree = "<group>"; };
+E2A8CCD978C5422DCA3A8201 = { isa = PBXBuildFile; fileRef = 069CC272CEA9126EE9AFF405; };
+482182478A3ECD4745BEA917 = { isa = PBXGroup; children = (92D27FA9819136555E8E8A0B,32BC6608901033E152158259,069CC272CEA9126EE9AFF405); path = Sources; sourceTree = "<group>"; };
+38A007151ABE87CC01A5B6E9 = { isa = PBXFileReference; explicitFileType = wrapper.application; path = VrijRit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+FBDC4F23F93125BBEEAE800C = { isa = PBXGroup; children = (38A007151ABE87CC01A5B6E9); name = Products; sourceTree = "<group>"; };
+325F10A6957A34D66CB8C0E4 = { isa = PBXGroup; children = (482182478A3ECD4745BEA917,FBDC4F23F93125BBEEAE800C); sourceTree = "<group>"; };
+BCE16DD0260827ECF338C787 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (3736287ABAD8C9B32F671D16,B1E01DF435B98932FCD12530,E2A8CCD978C5422DCA3A8201); runOnlyForDeploymentPostprocessing = 0; };
+F178867DA2879CAE0F60630A = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+0189424A5A60FED329FA868E = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+E9B2E96ABC5F6856F2BE79CF = { isa = XCBuildConfiguration; name = Debug; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = nl.ewald.vrijrit; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; };
+89E1FD6268CC0F221A2BE178 = { isa = XCBuildConfiguration; name = Debug; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; }; };
+5A8C91857F674E16E2724F47 = { isa = XCBuildConfiguration; name = Release; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = nl.ewald.vrijrit; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; };
+E6DE6C99132752C914FEF632 = { isa = XCBuildConfiguration; name = Release; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; }; };
+3ADB3100893F0122E432328D = { isa = XCConfigurationList; buildConfigurations = (E9B2E96ABC5F6856F2BE79CF,5A8C91857F674E16E2724F47); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+FBD3510CED826C9DAA696E48 = { isa = XCConfigurationList; buildConfigurations = (89E1FD6268CC0F221A2BE178,E6DE6C99132752C914FEF632); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+0E8A3AD980EC179856012B7E = { isa = PBXNativeTarget; buildConfigurationList = 3ADB3100893F0122E432328D; buildPhases = (BCE16DD0260827ECF338C787,F178867DA2879CAE0F60630A,0189424A5A60FED329FA868E); buildRules = (); dependencies = (); name = VrijRit; productName = VrijRit; productReference = 38A007151ABE87CC01A5B6E9; productType = "com.apple.product-type.application"; };
+98F54143AB4E86B28C3AFEE0 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = FBD3510CED826C9DAA696E48; compatibilityVersion = "Xcode 14.0"; developmentRegion = nl; knownRegions = (nl,en,Base); mainGroup = 325F10A6957A34D66CB8C0E4; productRefGroup = FBDC4F23F93125BBEEAE800C; projectDirPath = ""; projectRoot = ""; targets = (0E8A3AD980EC179856012B7E); };
+}; rootObject = 98F54143AB4E86B28C3AFEE0; }
